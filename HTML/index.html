@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Fullscreen Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/supersized.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+    </head>
+
+    <body>
+        <h1 id = "head" hidden="true">Welcome To Energy sharing Platform</h1>
+        <div class="page-container" id="Login">
+            <h1>Login</h1>
+            <form >
+                <input id="username_login" type="text" name="username" class="username" placeholder="Username">
+                <input type="password" name="password" value = "111111"class="password" placeholder="Password">
+                <div class="error"><span>+</span></div>
+            </form>
+            <button id="submit" onclick="signIN()">Sign me in</button>
+        </div>
+        <button id="left" onclick="Leave()" hidden="true">Leave</button>
+
+        <div class="page-container" id = "UserInfo" hidden="true">
+            <div id="PayNotice"  ></div>
+            <div id = "user" class = "info">User:</div>
+            <div id = "channel" class = "info">Index:</div>
+            <div id = "amount" class = "info">Amount:</div>
+            <div id = "consumer" class="info">Consumer:</div>
+            <button id="Pay_money" onclick="Pay_money()">Pay</button>
+        </div>
+        <div id="ChannelBox"  hidden="true">
+            <div style="display: inline-block"> 
+            <div><img src="assets/img/images.jpg" class="imgclass" width="140px" height="140px" onclick="SetChannel(0)"></div>
+            <div class="imgdiv" style="display:inline-block">Used:</div>
+            <input class="divInput">
+            <div class="imgdiv" style="display:inline-block">Provied</div>
+            <input class="divInput">
+            <div class="display"><button id="set"></button></div>
+            </div>
+        </div>
+        <div id = "Box" hidden="true">
+            <div id="channel0" style="display: inline-block;">
+            <div> <img id="imge0" src = "assets/img/images.jpg" onclick="SetChannel(0)" ></div>
+            <div id="Used0"  style="display: inline;">Used :<input id = "input0" class="divInput" > </div>
+            <div id="Donated0" style="display: inline;" > Donated :<input id = "output0" class="divInput"></div>
+            </div>
+        </div>
+        <button id="set0" onclick="BuildChannel()" hidden ="true">Build Channel</button>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/supersized.3.2.7.min.js"></script>
+        <script src="assets/js/supersized-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/EnergySharing.js"></script>
+    </body>
+
+</html>
+
